@@ -76,8 +76,8 @@ function App() {
             .filter(function (evento) {
               return evento.tema.id == tema.id
             })
-            .map(function(evento, index){
-              return <CardEvento evento={evento} key={index} />
+            .map(function(evento, indice){
+              return <CardEvento evento={evento} key={indice} />
             })}
             </div>
           </section>
