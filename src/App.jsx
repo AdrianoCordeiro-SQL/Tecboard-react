@@ -60,17 +60,23 @@ function App() {
       temas={temas} 
       aoSubmeter={adicionarEvento} 
       />
+
+      <section className="container">
       {temas.map(function (item) {
         return (
           <section key={item.id}>
             <Tema tema={item} />
+            <div className="eventos">
             {eventos.map(function(item, index){
               
               return <CardEvento evento={item} key={index} />
             })}
+            </div>
           </section>
         );
       })}
+      </section>
+
 
       {/* <section>
         <Tema tema={temas[1]} />
